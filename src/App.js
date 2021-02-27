@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  IonApp,
+  IonContent,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+} from '@ionic/react';
+import * as React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IonApp>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Biorhythm Calculator</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent className="ion-padding">
+        <p>Here be content…</p>
+      </IonContent>
+    </IonApp>
   );
 }
 
