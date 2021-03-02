@@ -1,9 +1,5 @@
 import {
   IonApp,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
   IonContent,
   IonDatetime,
   IonHeader,
@@ -12,11 +8,12 @@ import {
   IonToolbar,
   IonTitle,
 } from '@ionic/react';
+import BiorhythmCard from './components/BiorhythmCard';
 import * as React from 'react';
 
-function App() {
-  const [name, setName] = React.useState('');
-  const [date, setDate] = React.useState('')
+function App({}) {
+  const [date, setDate] = React.useState('');
+  const targetDate = new Date().toISOString();
 
   return (
     <IonApp>
@@ -35,14 +32,9 @@ function App() {
             value={date} 
           />
         </IonItem>
-        <IonCard className="ion-text-center">
-          <IonCardHeader>
-            <IonCardTitle></IonCardTitle>
-          </IonCardHeader>
-          <IonCardContent>
-
-          </IonCardContent>
-        </IonCard>
+        <BiorhythmCard 
+          targetDate={targetDate}
+        />
       </IonContent>
     </IonApp>
   );
