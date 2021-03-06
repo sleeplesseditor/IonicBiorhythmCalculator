@@ -9,10 +9,11 @@ import {
   IonTitle,
 } from '@ionic/react';
 import BiorhythmCard from './components/BiorhythmCard';
+import { useLocalStorage } from './hooks';
 import * as React from 'react';
 
 function App({}) {
-  const [birthDate, setBirthDate] = React.useState('');
+  const [birthDate, setBirthDate] = useLocalStorage('birthDate', '');
   const [targetDate, setTargetDate] = React.useState(new Date().toISOString());
 
   return (
